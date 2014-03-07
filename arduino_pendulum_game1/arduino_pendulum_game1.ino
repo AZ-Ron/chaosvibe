@@ -122,7 +122,7 @@ float getf0(float t,float y[],float gamma, float omega0, float A,float force){
 }
 float getf1(float t,float y[],float gamma, float omega0,float A, float force){
   float result;
-  result = -sin(y[0]) - gamma*y[1] + A*cos(omega0*t) + force;
+  result = -(1 + force)*sin(y[0]) - gamma*y[1] + A*cos(omega0*t);
   return result;
 }
 
